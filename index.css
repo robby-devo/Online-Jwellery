@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.main {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+.main header {
+  height: 15vh;
+  position: relative;
+  height: 250px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://image.shutterstock.com/image-photo/pure-24-carat-gold-jewellery-260nw-780966115.jpg");
+  background-size: cover;
+  background-position: center center;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.main header .iconShopping {
+  cursor: pointer;
+  font-size: 1.8rem;
+  z-index: 1;
+  position: relative;
+}
+
+.main header .iconShopping p {
+  position: absolute;
+  top: -5px;
+  left: -15px;
+  font-size: 18px;
+  background-color: #000;
+  border-radius: 52%;
+  color: white;
+}
+
+/* items */
+.main .itemsBox {
+  position: relative;
+  height: calc(100%-15vh);
+  width: 90%;
+  margin: 50px auto;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  background: rgb(255, 255, 255);
+}
+
+.main .itemsBox .item {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 25px;
+  border: 1px solid black;
+}
+.main .itemsBox .item img {
+  text-align: center;
+  position: relative;
+
+  object-fit: contain;
+}
+.main .itemsBox .item h1 {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+.main .itemsBox .item p {
+  position: relative;
+  width: 100%;
+  text-align: right;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  color: rgb(240, 8, 0);
+}
+
+.main .itemsBox .item a {
+  text-align: left;
+  background: #01f1f5;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  text-shadow: rgba(0, 0, 0, 0.5);
+}
+
+.main .itemsBox .item a:hover {
+  background-color: black;
+  color: white;
+}
+
+/* cartBox */
+
+/*cart box*/
+.cartBox {
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  transition: 0.3s linear;
+  transform: scale(0);
+}
+.cartBox.active {
+  transform: scale(1);
+}
+i.fa-close {
+  width: 110px;
+  height: 50px;
+}
+
+.cartBox .cart {
+  position: relative;
+  height: 70%;
+  width: 80%;
+  background: #fff;
+}
+.cartBox .cart i:hover {
+  background: #ff0000a5;
+}
+.cartBox .cart h1 {
+  position: relative;
+  margin-top: 2%;
+  font-size: 2.8rem;
+  color: #017bf5;
+}
